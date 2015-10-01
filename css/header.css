@@ -1,0 +1,618 @@
+.site-header {
+	height: 64px;
+	background: #1a5880;
+	position: relative;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+	z-index: 10;
+}
+.settings{
+	max-width: 500px;
+	height: 64px;
+	float: right;
+	position: relative;
+}
+
+/*----logo----*/
+
+.brand__logo{
+	float: left;
+	padding: 19px 0;
+	height: 26px;
+	width: 171px;
+}
+.brand__logo-resposive{
+	display: none;
+	float: left;
+	padding: 19px 0;
+	height: 100%;
+}
+@media screen and (max-width: 459px){
+	.brand__logo-resposive{
+		display: block;
+	}
+	.brand__logo{
+		display: none;
+	}
+}
+@media screen and (max-width: 279px){
+	.brand__logo-resposive{
+		display: none;
+	}
+	.brand__logo{
+		display: none;
+	}
+}
+
+/*---------------------------------------------lovers---------------------------------------------*/
+
+.lovers{
+	float: left;
+	color: #bacdd9;
+	padding: 21px 0 21px 44px;
+	vertical-align: baseline;
+}
+	@media screen and (max-width: 920px){
+		.lovers{
+			display: none;
+		}
+	}
+.lovers__heart{
+	font-size: 14px;
+	font-family: fontawesome;
+	margin-right: 6px;
+}
+.lovers__count{
+	font-size: 16px;
+	font-family: open_sanssemibold;
+	margin-right: 5px;
+}
+.lovers__label{
+	font-family: open_sanslight;
+	font-size: 14px;
+}
+
+/* -----------------------------------phones-------------------------------------*/
+
+.phone:hover{
+	background-color: #133f5c;
+}
+.phone:hover> .phone__angle_box{
+	border: 0;
+	right: 1px;
+}
+.phone{
+	width: 219px;
+	height: 64px;
+	color: #fff;
+	background: transparent;
+	border: 0;
+	float: left;
+	text-align: right;
+	position: relative;
+	padding: 16px 45px 16px 0;
+	outline: 0;
+	-webkit-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.phone__icon{
+	font-family: fontawesome;
+	vertical-align: -2px;
+	font-size: 18px;
+	margin-right: 0;
+}
+.phone__code{
+	font-family: open_sanslight;
+}
+.phone__number{
+	font-family: open_sanssemibold;
+	font-size: 15px;
+}
+.phone__label{
+	font-size: 11px;
+	display: block;
+	margin-top: -5px;
+	opacity: .5;
+}
+.phone__angle_box{
+	position: absolute;
+	top: 17px;
+	right: 0;
+	width: 30px;
+	height: 31px;
+	border-right-style: solid;
+  border-width: 1px;
+	border-color: #8dacc0;
+}
+.phone__angle{
+	font-family: fontawesome;
+	position: absolute;
+	left: -1px;
+	top: 7px;
+}
+.other-phones{
+	display: none;
+	background: #fff;
+	border-radius: 3px;
+	width: 501px;
+	padding: 0 20px 0 20px;
+	height: 293px;
+	position: absolute;
+	top: 70px;
+	left: -169px;
+	color: #000;
+	z-index: 4;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.other-phones:hover{
+	cursor :default;
+}
+.other-phones__triangle{
+	border-bottom: 6px;
+	border-right: 6px;
+	border-left: 6px;
+	border-top: 0;
+	border-style: solid;
+	border-bottom-color: #fff;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	position: absolute;
+	top: -6px;
+	left: 50%;
+	margin-left: -6px;
+}
+.country-phones{
+	height: 270px;
+	width: 236px;
+	background-color: #fff;
+	margin: 9px 0 10px 0;
+	text-align: left;
+	vertical-align: baseline;
+	padding: 2px 0 2px 0;
+}
+.country_phones__item{
+	height: 30px;
+}
+.country_phones__item__flag,
+.country_phones__item__flag--auto{
+	height: 30px;
+	width: 22px;
+	display: block;
+	float: left;
+}
+.country_phones__item__flag img,
+.country_phones__item__flag--auto img{
+	margin: 10px 0 11px 0;
+	width: 14px;
+	height: 9px;
+}
+.country_phones__item__name{
+	font-family: open_sanssemibold;
+	font-size: 13px;
+	margin: 6px 0;
+	float: left;
+
+}
+.country_phones__item__number{
+	font-size: 13px;
+	display: block;
+	margin: 6px 0;
+	float: right;
+}
+.other-phones__triangle + div{
+	float: left;
+	border-right: 1px solid #ddd;
+	padding-right: 14px;
+}
+.other-phones__triangle + div + div{
+	float:left;
+	padding-left: 14px;
+}
+@media screen and (max-width: 720px){
+	.phone__code,
+	.phone__number,
+	.phone__label{
+		display: none;
+	}
+	.phone{
+	width: 50px;
+	margin-left: 10px;
+	}
+	.phone__angle_box{
+		width: 20px;
+	}
+	.phone__icon{
+		margin-left: 10px;
+	}
+	.other-phones{
+		width: 236px;
+		left: -103px;
+		height: auto;
+		padding: 10px 20px;
+		height: 270px;
+		}
+		.country-phones{
+			margin: 0;
+			}
+		.other-phones__triangle + div{
+			padding: 0;
+			border: none;
+			height: 100%;
+			}
+		.other-phones__triangle + div + div{
+			display: none;
+			}
+}
+@media screen and (max-width: 459px){
+	.other-phones{
+		left: -33px;
+	}
+	.other-phones__triangle{
+		margin-left: -76px;
+	}
+}
+@media screen and (max-width: 315px){
+	.phone{
+		margin-left: 1px;
+	}
+	.other-phones{
+		left: -61px;
+	}
+	.other-phones__triangle{
+		margin-left: -56px;
+	}
+}
+
+/*-------------------------------------language------------------------------*/
+
+.language:hover{
+	background-color: #133f5c;
+	border-radius: 4px;
+	color: #fff;
+}
+
+.language{
+	background: transparent;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	width: 66px;
+	height: 38px;
+	float: left;
+	color: #bacdd9;
+	position: relative;
+	margin: 13px 0 13px 11px;
+	-webkit-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.language__lang{
+	font-size: 14px;
+	margin-left: 15px;
+	float: left;
+	margin-top: -1px;
+}
+.language__angle{
+	float: right;
+	font-family: fontawesome;
+	margin-right: 14px;
+	margin-top: 1px;
+}
+.other-languages{
+	display: none;
+	height: 213px;
+	width: 240px;
+	background: #fff;
+	border-radius: 3px;
+	position: absolute;
+	right: 114px;
+	top: 60px;
+	padding: 9px 0 10px 0;
+	z-index: 4;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.other-languages__triangle,
+.calendar__triangle,
+.calendar__triangle::after{
+	border-width: 0 6px 6px 6px;
+	border-style: solid;
+	border-bottom-color: #fff;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	position: absolute;
+	top: -6px;
+	left: 50%;
+	margin-left: -6px;
+}
+.other-languages__langs{
+	height: 210px;
+	width: 120px;
+	text-align: left;
+	padding: 2px 0 1px 0px;
+	font-size: 13px;
+	color: #000;
+	float: left;
+}
+.other-languages__triangle + div {
+
+}
+.other-languages__triangle + div + div{
+	width: 99px;
+	border-left: 1px solid #ddd;
+	width: 119px;
+}
+.other-languages__langs__item:hover{
+	background: #1a587f;
+	color: #fff;
+	cursor: pointer;
+}
+.other-languages__langs__item{
+	height: 30px;
+}
+.other-languages__langs__item__name{
+	display: block;
+	padding: 6px 0 6px 20px;
+}
+.other-languages:hover{
+	cursor: default;
+}
+@media screen and (max-width: 559px){
+	.other-languages{
+		right: 28px;
+	}
+}
+@media screen and (max-width: 315px){
+	.language{
+		width: 40px;
+	}
+	.language__lang{
+		margin-left: 4px;
+	}
+	.language__angle{
+		margin-right: 2px;
+	}
+	.other-languages{
+		right: 15px;
+	}
+}
+
+/*----------------------------currency-------------------------------*/
+
+.currency:hover{
+	background-color: #133f5c;
+	border-radius: 4px;
+	color: #fff;
+}
+.currency{
+	background: transparent;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	width: 59px;
+	height: 38px;
+	float: left;
+	color: #bacdd9;
+	margin-left: 3px;
+	margin-top: 13px;
+	margin-bottom: 13px;
+	position: relative;
+	-webkit-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.currency__valuta{
+	font-size: 13px;
+	float: left;
+	font-family: fontawesome;
+	margin-left: 16px;
+	margin-top: 3px;
+}
+.currency__angle{
+	float: right;
+	font-family: fontawesome;
+	margin-right: 14px;
+	margin-top: 1px;
+}
+.other-valuta{
+	display: none;
+	height: 303px;
+	width: 240px;
+	background: #fff;
+	position: absolute;
+	right: 50px;
+	top: 60px;
+	border-radius: 3px;
+	padding: 9px 0 10px 0;
+	z-index: 4;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.other-valuta__triangle{
+	border-width: 0 6px 6px 6px;
+	border-style: solid;
+	border-bottom-color: #fff;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	position: absolute;
+	top: -6px;
+	left: 50%;
+	margin-left: -6px;
+}
+.other-valuta__val{
+	margin: 2px 0 1px 0;
+	color: #000;
+}
+.other-valuta__val__item{
+	height: 30px;
+}
+.other-valuta__val__item__name{
+	display: block;
+	float: left;
+	color: #000;
+	margin: 4px 0 4px 20px;
+	font-size: 14px;
+}
+.other-valuta__val__item__simb{
+	display: block;
+	float: right;
+	color: #1a5880;
+	margin: 4px 20px 4px 0;
+	font-size: 14px;
+}
+.other-valuta__val__item:hover{
+	background: #1a587f;
+	color: #000;
+}
+.other-valuta__val__item:hover{
+	cursor: pointer;
+}
+.other-valuta__val__item:hover> .other-valuta__val__item__name{
+	color: #fff;
+}
+.other-valuta__val__item:hover> .other-valuta__val__item__simb{
+	color: #fff;
+}
+.other-valuta:hover{
+	cursor: default;
+}
+@media screen and (max-width: 559px){
+	.other-valuta{
+		right: 3px;
+	}
+	.other-valuta__triangle{
+		margin-left: 34px;
+	}
+}
+
+/*----------------------------------------------bookings--------------------------------*/
+
+.booking:hover{
+	background-color: #133f5c;
+	border-radius: 4px;
+	border: 0;
+}
+.booking:hover > .booking__label{
+	left: 17px;
+	top: 11px;
+}
+.booking:hover > .booking__angle{
+	left: 92px;
+	top: 12px;
+}
+.booking{
+	background: transparent;
+	outline: 0;
+	border-radius: 4px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #5f8aa6;
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
+	width: 118px;
+	height: 38px;
+	float: left;
+	color: #fff;
+	margin-left: 21px;
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+.booking__label{
+	font-size: 13px;
+	float: left;
+	left: 16px;
+	top: 10px;
+	position: absolute;
+}
+.booking__label-resposive{
+	display: none;
+	font-family: fontawesome;
+	margin-left: -10px;
+	font-size: 13px;
+}
+.booking__angle{
+	font-family: fontawesome;
+	float: right;
+	position: absolute;
+	right: 14px;
+	top: 11px;
+}
+.mybooking{
+	display: none;
+	height: 142px;
+	width: 200px;
+	position: absolute;
+	background: #fff;
+	border-radius: 3px;
+	top: 60px;
+	right: 3px;
+	padding: 20px;
+	z-index: 4;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.mybooking__triangle{
+	border-width: 0 6px 6px 6px;
+	border-style: solid;
+	border-bottom-color: #fff;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	position: absolute;
+	top: -6px;
+	right: 57px;
+	margin-right: -6px;
+}
+.mybooking__login__email{
+	height: 34px;
+	width: 190px;
+	border: 1px #ddd solid;
+	margin-bottom: 14px;
+	color: #777;
+	font-size: 13px;
+	padding-left: 8px;
+}
+.mybooking__login__number{
+	height: 34px;
+	width: 190px;
+	border: 1px #ddd solid;
+	margin-bottom: 14px;
+	color: #777;
+	font-size: 13px;
+	padding-left: 8px;
+}
+.mybooking__login__button{
+	height: 40px;
+	width: 198px;
+	border: 1px #ddd solid;
+	background: #0073b5;
+	border-radius: 3px;
+}
+.mybooking__login__button__signin{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #fff;
+}
+.mybooking:hover{
+	cursor: default;
+}
+.mybooking__login__button:hover{
+	cursor: pointer;
+}
+@media screen and (max-width: 559px){
+	.booking{
+		width: 50px;
+		margin-left: 2px;
+	}
+	.booking__label{
+		display: none;
+	}
+	.booking__label-resposive{
+		display: inline-block;
+	}
+	.booking__angle{
+		right: 8px;
+	}
+	.language{
+		margin-left: 2px;
+	}
+	.mybooking__triangle{
+		margin-right: -38px;
+	}
+}

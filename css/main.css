@@ -1,0 +1,30 @@
+
+body {
+	font-family: open_sansregular;
+}
+.wrapper{
+	max-width: 960px;
+	margin: auto;
+	position: relative;
+	padding: 0 20px;
+}
+.spotlight{
+	background:  url(../img/Rome.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.spotlight-bg{
+	background: rgba(0, 0, 0, .6);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.hot-deals{
+	background: #efe3c5;
+}
+.cf:before, .cf:after { content: " "; display: table; }
+
+.cf:after { clear: both; }

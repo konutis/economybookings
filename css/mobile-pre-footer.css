@@ -1,0 +1,177 @@
+.mobile-pre-footer{
+    height: 500px;
+	background:  url(../img/pre-footer-bg.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+    }
+.mobile-pre-footer-bg{
+	background: rgba(0, 0, 0, .4);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    }
+.mobile-left{
+    float: left;
+    }
+    .pre-footer__header{
+        color: #fff;
+        font: 60px open_sanslight;
+        margin: 0;
+        padding: 0;
+        max-width: 540px;
+        padding-top: 55px;
+        }
+    .pre-footer__text{
+        font: 18px open_sansregular;
+        color: #fff;
+        max-width: 540px;
+        padding-top: 20px;
+        }
+    .mobile-apps{
+        padding-bottom: 35px;
+        }
+        .google-play{
+            float: left;
+            margin-top: 25px;
+            }
+            .google-play-logo:hover{
+                background-position: -1px -2px;
+                cursor: pointer;
+                }
+            .google-play-logo{
+                height: 71px;
+                width: 234px;
+                background: url(../img/google-play.png);
+                border-radius: 9px;
+                background-position: -237px -2px;
+                }
+                .available-on{
+                    left: 86px;
+                    top: 8px;
+                    font: 13px open_sanssemibold;
+                    color: #0579c1;
+                    position: relative;
+                    }
+            .google-play-rating,
+            .app-store-rating{
+                font: 15px fontawesome;
+                color: #fff292;
+                position: relative;
+                top: 13px;
+                left: 62px;
+                }
+        .app-store{
+            float: left;
+            margin-top: 25px;
+            margin-left: 20px;
+            }
+            .app-store-logo:hover{
+                background-position: -1px -2px;
+                cursor: pointer;
+                }
+            .app-store-logo{
+                height: 71px;
+                width: 234px;
+                background: url(../img/appstore.png);
+                border-radius: 9px;
+                background-position: -237px -2px;
+                position: relative;
+                }
+                .app-store-text{
+                    font: 22px open_sanssemibold;
+                    left: 83px;
+                    top: 30px;
+                    color: #0579c1;
+                    position: absolute;
+                    }
+    .phone-app{
+        float: right;
+        top: 55px;
+        right: 10px;
+        position: relative;
+        z-index: 2;
+        }
+        .blank-mobile-phone{
+            }
+        .phone-screen{
+            position: absolute;
+            top: 71px;
+            left: 36px;
+            }
+        .zoom-circle{
+            height: 228px;
+            width: 228px;
+            border-radius: 50%;
+            background: url(../img/mobile-zoom.png);
+            background-position: -10px -410px;
+            position: absolute;
+            top: 175px;
+            left: -78px;
+        	   box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+            }
+.mobile-footer{
+    background: #999;
+    position: relative;
+    }
+.mobile-footer-bg{
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    }
+    .app-partners{
+        padding-top: 25px;
+        padding-bottom: 24px;
+        }
+        .app-partners img:nth-child(2){
+            vertical-align: top;
+            margin-top: 16px;
+            margin-left: 19px;
+            }
+@media screen and (max-width: 949px){
+    .phone-app{
+        display: none;
+        }
+}
+@media screen and (max-width: 599px){
+    .pre-footer__header{
+        font:30px open_sanslight;
+        padding-top: 22px;
+        }
+    .pre-footer__text{
+        font: 14px open_sansregular;
+        padding-top: 13px;
+        }
+    .google-play{
+        float: none;
+        margin-top: 25px;
+        }
+    .app-store{
+        float: none;
+        margin: auto;
+        margin-top: 25px;
+        }
+}
+@media screen and (max-width: 499px){
+    .pre-footer__header{
+        font:30px open_sanslight;
+        }
+    .pre-footer__text{
+        font: 14px open_sansregular;
+        }
+    .google-play{
+        float: none;
+        margin-top: 25px;
+        }
+    .app-store{
+        float: none;
+        margin: auto;
+        margin-top: 25px;
+        }
+}

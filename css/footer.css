@@ -1,0 +1,218 @@
+footer{
+    background: #222;
+    }
+    .footer-top{
+        background: #555;
+        box-sizing: border-box;
+        padding: 28px 0 28px 0;
+        }
+		.about-us__menu{
+			float: left;
+			}
+			.footer-list{
+				display: inline-block;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				vertical-align: top;
+				color: #fff;
+				font-size: 13px;
+				width: 135px;
+				}
+				.footer-list__header{
+					font-size: 16px;
+					color: #ccc;
+					}
+				.footer-list li:hover{
+					cursor: pointer;
+					text-decoration: underline;
+					}
+				.footer-list li{
+					margin: 7px 0;
+					}
+		.footer-select{
+			display: none;
+			font-size: 14px;
+			border-radius: 3px;
+			box-shadow: 0 0 20px #666;
+			background: #ddd;
+			vertical-align: top;
+            }
+            .footer-select optgroup{
+                font-size: 14px;
+                }
+        .social-icons{
+            font: 33px fontawesome;
+            color: #c7c7c7;
+            float: left;
+            margin-left: 30px;
+			margin-top: 10px;
+			width: 30px;
+            }
+            .social-icons span:hover{
+                cursor: pointer;
+                color: #d6d6d6;
+                }
+            .social-icons span{
+                line-height: 55px;
+                }
+            .social-icons .google{
+                position: relative;
+                top: 2px;
+                }
+        .subscribe-box{
+            background: #444;
+            Float: right;
+            box-sizing: border-box;
+            padding: 20px 18px 24px 18px;
+			width: 320px;
+            }
+            .subscribe-box__header{
+                font-size: 18px;
+                color: #ccc;
+                display: block;
+                margin-bottom: 5px;
+                }
+            .subscribe-box__item{
+                font-size: 14px;
+                color: #9f9f9f;
+                line-height: 18px;
+                }
+            .enter-mail--footer{
+                height: 32px;
+                width: 276px;
+                display: inline-block;
+                border-radius: 2px;
+                border: 0;
+                }
+            .stay-tuned-button--footer:hover{
+                background: #fb7332;
+                }
+            .stay-tuned-button--footer{
+                display: inline-block;
+                height: 40px;
+				width: 284px;
+                background: #f26522;
+                border-radius: 3px;
+                margin-top: 10px;
+                
+                }
+            .subscribe-box input::-webkit-input-placeholder { font-size: 16px; }
+            .subscribe-box input::-moz-placeholder { font-size: 16px; }
+            .subscribe-box input:-ms-input-placeholder { font-size: 16px; }
+            .subscribe-box input:-moz-placeholder { font-size: 16px; }
+    .footer-bottom{
+        background: #2d2d2d;
+        }
+        .booking-group{
+            padding-top: 36px;
+            padding-bottom: 37px;
+            float: left;
+            }
+            .booking-group img:hover{
+                cursor: pointer;
+                }
+            .booking-group div{
+                font-size: 12px;
+                color: #9f9f9f;
+                }
+        .social-box{
+            padding-top: 33px;
+            float: left;
+            margin-left: 140px;
+            }
+            .social-box img:hover{
+                cursor: pointer;
+                }
+            .social-box img:first-child{
+                margin-right: 30px;
+                }
+        .norton-sec:hover{
+            cursor: pointer;
+            }
+        .norton-sec{
+            float: right;
+            padding: 20px 0;
+            height: 70px;
+            width: 121px;
+            }
+@media screen and (max-width: 999px){
+	.about-us__menu{
+		display: none;
+		}
+	.footer-select{
+		display: inline-block;
+		float: left;
+		}
+	.social-icons{
+            display: inline-block;
+            margin: 0 15px 25px 25px;
+			width: auto;
+            }        
+            .social-icons span{
+                margin-left: 30px;
+                }
+            .social-icons .google{
+                position: relative;
+                top: 2px;
+                }
+}			
+@media screen and (max-width: 799px){
+    .social-box{
+        margin-left: 30px;
+        }
+}
+@media screen and (max-width: 699px){
+    .booking-group{
+        padding: 20px 0;
+        }
+    .social-box{
+        float: none;
+        clear: both;
+        margin: 0;
+        padding: 0;
+        }
+        .social-box img:first-child{
+            margin-right: 10px;
+            }
+    .norton-sec{
+        float: left;
+        }
+}
+@media screen and (max-width: 599px){
+    .social-icons{
+        display: block;
+        margin-top: 20px;
+        }
+    .subscribe-box{
+    	height: 190px;
+    	width: 240px;
+    	padding: 24px 18px;
+    	}
+    	.subscribe-box__header{
+    		font-size: 16px;
+    		color: #fff;
+    		}
+    	.subscribe-box__item{
+    		font-size: 12px;
+    		color: #bebebe;
+    		display: block;
+    		line-height: 16px;
+    		}
+    	.enter-mail--footer{
+    		height: 30px;
+    		width: 196px;
+            border-radius: 0;
+    		}
+        .subscribe-box input::-webkit-input-placeholder { font-size: 13px; }
+        .subscribe-box input::-moz-placeholder { font-size: 13px; }
+        .subscribe-box input:-ms-input-placeholder { font-size: 13px; }
+        .subscribe-box input:-moz-placeholder { font-size: 13px; }
+    	.stay-tuned-button--footer{
+    		height: 32px;
+    		width: 204px;
+    		background: #f2a622;
+            margin: 0;
+    		margin-top: 10px;
+    		}
+}

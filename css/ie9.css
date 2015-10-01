@@ -1,0 +1,12 @@
+.other-links__list{
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.other-link__box{
+    display: inline-block;
+    margin: 0 20px;
+    width: 206px
+}
+input.placeholder{
+    color: rgb(170, 170, 170)
+}

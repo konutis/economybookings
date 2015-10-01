@@ -1,0 +1,87 @@
+.partners{
+    background: #d8e9f2;
+    text-align: center;
+    }
+    .partners__header{
+        padding: 25px 0;
+        margin: 0;
+        font: 18px open_sanssemibold;
+        color: #1a5880;
+        }
+    .partners__list{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+		padding-bottom: 29px;
+        }
+        .partner__list__item:first-child{
+            margin-left: 0;
+            }
+        .partner__list__item:hover{
+            cursor: pointer;
+            }
+        .partner__list__item{
+            display: inline-block;
+            width: 120px;
+            margin-left: 13px;
+			vertical-align: top;
+            }
+		.partner__list__item.best{
+			
+			}
+                .partner__list__item.best span img{
+                    position: relative;
+                    top: 20px;
+                    left: -7px;
+                    margin-top: -30px;
+                    }
+                .partner__rating img{
+                    margin-top: 10px;
+                    }
+            .partner__logo{
+                width: 120px;
+                height: 50px;
+                margin-top: 12px;
+                overflow: hidden;
+                }
+                .partner__list__item:first-child div{
+                    background: #f9dc30;
+                    }
+                .partner__list__item:nth-child(2) div{
+                    background: #0061aa;
+                    }
+                    .partner__list__item:nth-child(2) div img{
+                        position: relative;
+                        top: 5px;
+                        }
+                .partner__list__item:nth-child(3) div,
+                .partner__list__item:nth-child(4) div,
+                .partner__list__item:nth-child(6) div{
+                    background: #047940;
+                    }
+                    .partner__list__item:nth-child(4) div img{
+                        position: relative;
+                        top: 11px;
+                        }
+                .partner__list__item:nth-child(5) div{
+                    background: #1c2d5d;
+                    }
+                    .partner__list__item:nth-child(5) div img{
+                        position: relative;
+                        top: 3px;
+                        }
+                .partner__list__item:nth-child(7) div{
+                    background: #00633a;
+                    }
+                    .partner__list__item:nth-child(7) div img{
+                        position: relative;
+                        top: 14px;
+                        }
+@media screen and (max-width: 999px){
+    .partner__list__item {
+		margin-top: 20px;
+	}
+	.partners__header{
+		padding: 25px 0 15px;
+		}
+}
