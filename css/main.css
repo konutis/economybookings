@@ -1,6 +1,7 @@
 
 body {
-	font-family: open_sansregular;
+	font-family: open_sansregular, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 .wrapper{
 	max-width: 960px;
@@ -22,9 +23,13 @@ body {
 	top: 0;
 	bottom: 0;
 }
-.hot-deals{
-	background: #efe3c5;
-}
+
 .cf:before, .cf:after { content: " "; display: table; }
 
 .cf:after { clear: both; }
+
+.col-4{
+	float: left;
+	width: 33.33334%;
+
+}

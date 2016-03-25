@@ -156,6 +156,12 @@ footer{
                 position: relative;
                 top: 2px;
                 }
+    .subscribe-box{
+        width: 100%;
+        }
+        .stay-tuned-button--footer{
+            margin-left: 30px;
+            }
 }			
 @media screen and (max-width: 799px){
     .social-box{
@@ -184,35 +190,4 @@ footer{
         display: block;
         margin-top: 20px;
         }
-    .subscribe-box{
-    	height: 190px;
-    	width: 240px;
-    	padding: 24px 18px;
-    	}
-    	.subscribe-box__header{
-    		font-size: 16px;
-    		color: #fff;
-    		}
-    	.subscribe-box__item{
-    		font-size: 12px;
-    		color: #bebebe;
-    		display: block;
-    		line-height: 16px;
-    		}
-    	.enter-mail--footer{
-    		height: 30px;
-    		width: 196px;
-            border-radius: 0;
-    		}
-        .subscribe-box input::-webkit-input-placeholder { font-size: 13px; }
-        .subscribe-box input::-moz-placeholder { font-size: 13px; }
-        .subscribe-box input:-ms-input-placeholder { font-size: 13px; }
-        .subscribe-box input:-moz-placeholder { font-size: 13px; }
-    	.stay-tuned-button--footer{
-    		height: 32px;
-    		width: 204px;
-    		background: #f2a622;
-            margin: 0;
-    		margin-top: 10px;
-    		}
 }

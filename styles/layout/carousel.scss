@@ -1,0 +1,19 @@
+.carousel__container {
+    overflow: hidden;
+    height: 200px;
+}
+.carousel__list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel__item{
+    flex: 1 0 250px;
+    /* 	max-width: 300px; */
+    height: 200px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #fff;
+}

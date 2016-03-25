@@ -2,17 +2,18 @@
 	height: 64px;
 	background: #1a5880;
 	position: relative;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	z-index: 10;
 }
 .settings{
-	max-width: 500px;
-	height: 64px;
 	float: right;
 	position: relative;
+	transition: opacity .3s;
 }
-
-/*----logo----*/
+.settings.opened{
+	height: auto;
+	opacity: 1;
+}
 
 .brand__logo{
 	float: left;
@@ -26,85 +27,69 @@
 	padding: 19px 0;
 	height: 100%;
 }
-@media screen and (max-width: 459px){
-	.brand__logo-resposive{
-		display: block;
-	}
-	.brand__logo{
-		display: none;
-	}
-}
-@media screen and (max-width: 279px){
-	.brand__logo-resposive{
-		display: none;
-	}
-	.brand__logo{
-		display: none;
-	}
-}
 
-/*---------------------------------------------lovers---------------------------------------------*/
+/*    ------------   lovers     -------------    */
 
 .lovers{
 	float: left;
 	color: #bacdd9;
 	padding: 21px 0 21px 44px;
 	vertical-align: baseline;
-}
-	@media screen and (max-width: 920px){
-		.lovers{
-			display: none;
-		}
-	}
-.lovers__heart{
 	font-size: 14px;
-	font-family: fontawesome;
+	transition: .3s;
+}
+.lovers.opened{
+	opacity: 1;
+	height: auto;
+}
+
+.lovers__heart{
+	font-family: fontawesome, Arial, sans-serif;
 	margin-right: 6px;
 }
 .lovers__count{
 	font-size: 16px;
-	font-family: open_sanssemibold;
+	font-family: open_sanssemibold, Arial, sans-serif;
 	margin-right: 5px;
 }
 .lovers__label{
-	font-family: open_sanslight;
-	font-size: 14px;
+	font-family: open_sanslight, Arial, sans-serif;
 }
+/*    ----------   phones    ----------------    */
 
-/* -----------------------------------phones-------------------------------------*/
+.phones-container{
+	float: left;
+	position: relative;
+}
 
 .phone:hover{
 	background-color: #133f5c;
 }
 .phone:hover> .phone__angle_box{
 	border: 0;
-	right: 1px;
 }
 .phone{
-	width: 219px;
-	height: 64px;
 	color: #fff;
 	background: transparent;
 	border: 0;
-	float: left;
 	text-align: right;
 	position: relative;
-	padding: 16px 45px 16px 0;
+	height: 64px;
+	padding: 0 45px 0 29px;
 	outline: 0;
 	-webkit-transition: all .5s ease;
 	        transition: all .5s ease;
 }
 .phone__icon{
-	font-family: fontawesome;
+	font-family: fontawesome, Arial, sans-serif;
 	vertical-align: -2px;
 	font-size: 18px;
-	margin-right: 0;
 }
 .phone__code{
-	font-family: open_sanslight;
+	font-family: open_sanslight, Arial, sans-serif;
 }
 .phone__number{
-	font-family: open_sanssemibold;
+	font-family: open_sanssemibold, Arial, sans-serif;
 	font-size: 15px;
 }
 .phone__label{
@@ -119,95 +104,90 @@
 	right: 0;
 	width: 30px;
 	height: 31px;
-	border-right-style: solid;
-  border-width: 1px;
-	border-color: #8dacc0;
+	box-sizing: border-box;
+	border-right: 1px #8dacc0 solid;
 }
 .phone__angle{
-	font-family: fontawesome;
+	font-family: fontawesome, Arial, sans-serif;
 	position: absolute;
 	left: -1px;
 	top: 7px;
 }
-.other-phones{
+.phones-dropdown.active{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.phones-dropdown{
 	display: none;
 	background: #fff;
 	border-radius: 3px;
-	width: 501px;
-	padding: 0 20px 0 20px;
-	height: 293px;
 	position: absolute;
 	top: 70px;
-	left: -169px;
+	left: 50%;
+	margin-left: -275px;
 	color: #000;
 	z-index: 4;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }
-.other-phones:hover{
-	cursor :default;
-}
-.other-phones__triangle{
-	border-bottom: 6px;
-	border-right: 6px;
-	border-left: 6px;
-	border-top: 0;
+.phones-dropdown:before,
+.languages-dropdown:before,
+.currency-dropdown:before,
+.booking-dropdown:before{
+	content: "";
 	border-style: solid;
-	border-bottom-color: #fff;
-	border-right-color: transparent;
-	border-left-color: transparent;
 	position: absolute;
 	top: -6px;
 	left: 50%;
 	margin-left: -6px;
+	border-width: 0 6px 6px 6px;
+	border-color: transparent transparent #fff transparent;
 }
+
 .country-phones{
-	height: 270px;
-	width: 236px;
-	background-color: #fff;
-	margin: 9px 0 10px 0;
+	margin: 10px 0;
 	text-align: left;
 	vertical-align: baseline;
-	padding: 2px 0 2px 0;
+	padding: 0 12px;
+}
+.country-phones:last-child{
+	border-left: 1px #ddd solid;
 }
 .country_phones__item{
-	height: 30px;
+	width: 252px;
 }
 .country_phones__item__flag,
 .country_phones__item__flag--auto{
-	height: 30px;
-	width: 22px;
+	width: 27px;
 	display: block;
 	float: left;
 }
 .country_phones__item__flag img,
 .country_phones__item__flag--auto img{
-	margin: 10px 0 11px 0;
-	width: 14px;
-	height: 9px;
+	margin: 10px 0 0 5px;
 }
 .country_phones__item__name{
-	font-family: open_sanssemibold;
+	font-family: open_sanssemibold, Arial, sans-serif;
 	font-size: 13px;
 	margin: 6px 0;
 	float: left;
-
+	max-width: 102px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .country_phones__item__number{
 	font-size: 13px;
 	display: block;
 	margin: 6px 0;
 	float: right;
+	max-width: 115px;
+	text-align: right;
 }
-.other-phones__triangle + div{
-	float: left;
-	border-right: 1px solid #ddd;
-	padding-right: 14px;
-}
-.other-phones__triangle + div + div{
-	float:left;
-	padding-left: 14px;
-}
-@media screen and (max-width: 720px){
+@media screen and (max-width: 920px){
+	.lovers{
+		padding-left: 20px;
+	}
 	.phone__code,
 	.phone__number,
 	.phone__label{
@@ -215,167 +195,105 @@
 	}
 	.phone{
 	width: 50px;
-	margin-left: 10px;
+
+	padding-left: 20px;
 	}
 	.phone__angle_box{
 		width: 20px;
+		border: 0;
 	}
 	.phone__icon{
-		margin-left: 10px;
-	}
-	.other-phones{
-		width: 236px;
-		left: -103px;
-		height: auto;
-		padding: 10px 20px;
-		height: 270px;
-		}
-		.country-phones{
-			margin: 0;
-			}
-		.other-phones__triangle + div{
-			padding: 0;
-			border: none;
-			height: 100%;
-			}
-		.other-phones__triangle + div + div{
-			display: none;
-			}
-}
-@media screen and (max-width: 459px){
-	.other-phones{
-		left: -33px;
-	}
-	.other-phones__triangle{
-		margin-left: -76px;
+		margin-right: 13px;
 	}
 }
-@media screen and (max-width: 315px){
-	.phone{
-		margin-left: 1px;
+@media screen and (max-width: 660px){
+	.phones-dropdown{
+		flex-direction: column;
+		padding: 7px 0;
+		margin-left: -138px;
 	}
-	.other-phones{
-		left: -61px;
+	.country-phones{
+		margin: 0;
 	}
-	.other-phones__triangle{
-		margin-left: -56px;
+	.country-phones:last-child{
+		border: 0;
 	}
 }
 
-/*-------------------------------------language------------------------------*/
+/*  -------------  language  ----------------    */
 
+.language-container{
+	float: left;
+	position: relative;
+}
 .language:hover{
 	background-color: #133f5c;
 	border-radius: 4px;
 	color: #fff;
 }
-
 .language{
 	background: transparent;
 	outline: 0;
 	border: 0;
 	padding: 0;
-	width: 66px;
 	height: 38px;
-	float: left;
 	color: #bacdd9;
-	position: relative;
-	margin: 13px 0 13px 11px;
+	margin: 13px 0 0 11px;
 	-webkit-transition: all .5s ease;
 	        transition: all .5s ease;
 }
 .language__lang{
 	font-size: 14px;
-	margin-left: 15px;
-	float: left;
-	margin-top: -1px;
+	margin: -1px 5px 0 15px;
 }
 .language__angle{
-	float: right;
-	font-family: fontawesome;
-	margin-right: 14px;
-	margin-top: 1px;
+	font-family: fontawesome, Arial, sans-serif;
+	margin: 1px 14px 0 0;
 }
-.other-languages{
+.languages-dropdown.active{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.languages-dropdown{
 	display: none;
-	height: 213px;
-	width: 240px;
 	background: #fff;
 	border-radius: 3px;
 	position: absolute;
-	right: 114px;
+	left: 50%;
+	margin-left: -115px;
 	top: 60px;
 	padding: 9px 0 10px 0;
 	z-index: 4;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-.other-languages__triangle,
-.calendar__triangle,
-.calendar__triangle::after{
-	border-width: 0 6px 6px 6px;
-	border-style: solid;
-	border-bottom-color: #fff;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	position: absolute;
-	top: -6px;
-	left: 50%;
-	margin-left: -6px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .other-languages__langs{
-	height: 210px;
 	width: 120px;
 	text-align: left;
-	padding: 2px 0 1px 0px;
 	font-size: 13px;
 	color: #000;
-	float: left;
 }
-.other-languages__triangle + div {
+.other-languages__langs:last-child{
+	border-left: 1px #ddd solid;
+}
 
-}
-.other-languages__triangle + div + div{
-	width: 99px;
-	border-left: 1px solid #ddd;
-	width: 119px;
-}
 .other-languages__langs__item:hover{
 	background: #1a587f;
 	color: #fff;
 	cursor: pointer;
 }
-.other-languages__langs__item{
-	height: 30px;
-}
 .other-languages__langs__item__name{
 	display: block;
 	padding: 6px 0 6px 20px;
 }
-.other-languages:hover{
-	cursor: default;
-}
-@media screen and (max-width: 559px){
-	.other-languages{
-		right: 28px;
-	}
-}
-@media screen and (max-width: 315px){
-	.language{
-		width: 40px;
-	}
-	.language__lang{
-		margin-left: 4px;
-	}
-	.language__angle{
-		margin-right: 2px;
-	}
-	.other-languages{
-		right: 15px;
-	}
-}
 
-/*----------------------------currency-------------------------------*/
+/* ---------------- currency ----------------- */
 
+.currency-container{
+	float: left;
+	position: relative;
+}
 .currency:hover{
 	background-color: #133f5c;
 	border-radius: 4px;
@@ -386,186 +304,118 @@
 	outline: 0;
 	border: 0;
 	padding: 0;
-	width: 59px;
 	height: 38px;
-	float: left;
 	color: #bacdd9;
-	margin-left: 3px;
-	margin-top: 13px;
-	margin-bottom: 13px;
-	position: relative;
+	margin: 13px 0 13px 3px;
 	-webkit-transition: all .5s ease;
 	        transition: all .5s ease;
 }
 .currency__valuta{
 	font-size: 13px;
-	float: left;
-	font-family: fontawesome;
-	margin-left: 16px;
-	margin-top: 3px;
+	font-family: fontawesome, Arial, sans-serif;
+	margin: 3px 8px 0 16px;
 }
 .currency__angle{
-	float: right;
-	font-family: fontawesome;
-	margin-right: 14px;
-	margin-top: 1px;
+	font-family: fontawesome, Arial, sans-serif;
+	margin: 1px 14px 0 0;
 }
-.other-valuta{
+.currency-dropdown{
 	display: none;
-	height: 303px;
 	width: 240px;
 	background: #fff;
 	position: absolute;
-	right: 50px;
+	left: 50%;
+	margin-left: -120px;
 	top: 60px;
 	border-radius: 3px;
 	padding: 9px 0 10px 0;
 	z-index: 4;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }
-.other-valuta__triangle{
-	border-width: 0 6px 6px 6px;
-	border-style: solid;
-	border-bottom-color: #fff;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	position: absolute;
-	top: -6px;
-	left: 50%;
-	margin-left: -6px;
-}
-.other-valuta__val{
-	margin: 2px 0 1px 0;
-	color: #000;
+.currency-dropdown.active {
+	display: block;
 }
 .other-valuta__val__item{
-	height: 30px;
+	font-size: 14px;
 }
 .other-valuta__val__item__name{
-	display: block;
 	float: left;
-	color: #000;
-	margin: 4px 0 4px 20px;
+	line-height: 30px;
+	margin: 0 20px;
 	font-size: 14px;
+	max-width: 145px;
 }
 .other-valuta__val__item__simb{
-	display: block;
 	float: right;
 	color: #1a5880;
-	margin: 4px 20px 4px 0;
-	font-size: 14px;
+	margin-right: 20px;
+	line-height: 30px;
 }
 .other-valuta__val__item:hover{
 	background: #1a587f;
-	color: #000;
-}
-.other-valuta__val__item:hover{
-	cursor: pointer;
-}
-.other-valuta__val__item:hover> .other-valuta__val__item__name{
 	color: #fff;
+	cursor: pointer;
 }
 .other-valuta__val__item:hover> .other-valuta__val__item__simb{
 	color: #fff;
 }
-.other-valuta:hover{
-	cursor: default;
-}
-@media screen and (max-width: 559px){
-	.other-valuta{
-		right: 3px;
-	}
-	.other-valuta__triangle{
-		margin-left: 34px;
-	}
-}
 
-/*----------------------------------------------bookings--------------------------------*/
+/*   --------  bookings   -----------  */
 
-.booking:hover{
-	background-color: #133f5c;
-	border-radius: 4px;
-	border: 0;
-}
-.booking:hover > .booking__label{
-	left: 17px;
-	top: 11px;
-}
-.booking:hover > .booking__angle{
-	left: 92px;
-	top: 12px;
+.booking-container{
+	float: left;
+	position: relative;
 }
 .booking{
 	background: transparent;
 	outline: 0;
 	border-radius: 4px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #5f8aa6;
+	border: 1px #5f8aa6 solid;
 	position: relative;
-	box-sizing: border-box;
-	padding: 0;
-	width: 118px;
+	padding: 0 15px;
 	height: 38px;
-	float: left;
 	color: #fff;
-	margin-left: 21px;
-	margin-top: 13px;
-	margin-bottom: 13px;
+	margin: 13px 0 0 20px;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.booking:hover{
+	background-color: #133f5c;
+	border-radius: 4px;
+	border: 1px rgba(0,0,0, 0) solid;
 }
 .booking__label{
 	font-size: 13px;
-	float: left;
-	left: 16px;
-	top: 10px;
-	position: absolute;
+	margin-right: 2px;
 }
 .booking__label-resposive{
 	display: none;
-	font-family: fontawesome;
-	margin-left: -10px;
+	font-family: fontawesome, Arial, sans-serif;
 	font-size: 13px;
+	margin-right: 3px;
 }
 .booking__angle{
-	font-family: fontawesome;
-	float: right;
-	position: absolute;
-	right: 14px;
-	top: 11px;
+	font-family: fontawesome, Arial, sans-serif;
 }
-.mybooking{
+.booking-dropdown{
 	display: none;
-	height: 142px;
-	width: 200px;
 	position: absolute;
 	background: #fff;
 	border-radius: 3px;
 	top: 60px;
-	right: 3px;
+	right: 0;
 	padding: 20px;
 	z-index: 4;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-.mybooking__triangle{
-	border-width: 0 6px 6px 6px;
-	border-style: solid;
-	border-bottom-color: #fff;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	position: absolute;
-	top: -6px;
-	right: 57px;
-	margin-right: -6px;
+.booking-dropdown.active {
+	display: block;
 }
-.mybooking__login__email{
-	height: 34px;
-	width: 190px;
-	border: 1px #ddd solid;
-	margin-bottom: 14px;
-	color: #777;
-	font-size: 13px;
-	padding-left: 8px;
+.booking-dropdown:before{
+	left: 100%;
+	margin-left: -57px;
 }
+.mybooking__login__email,
 .mybooking__login__number{
 	height: 34px;
 	width: 190px;
@@ -576,43 +426,137 @@
 	padding-left: 8px;
 }
 .mybooking__login__button{
-	height: 40px;
-	width: 198px;
-	border: 1px #ddd solid;
+	border: 0;
+	padding: 10px 0;
 	background: #0073b5;
 	border-radius: 3px;
-}
-.mybooking__login__button__signin{
-	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	text-align: center;
 	color: #fff;
+	width: 100%;
+	outline: 0;
 }
-.mybooking:hover{
-	cursor: default;
+
+/*   -------   toggle navigation button   ---   */
+
+
+.toggle-nav{
+	display: none;
+	float: right;
+	width: 36px;
+	height: 36px;
+	border: 1px #5f8aa6 solid;
+	background: transparent;
+	margin-top: 13px;
+	border-radius: 3px;
+	outline: 0;
+	position: relative;
 }
-.mybooking__login__button:hover{
-	cursor: pointer;
+.toggle-nav > span{
+	position: absolute;
+	width: 16px;
+	height: 2px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: #fff;
+	transition: .2s;
 }
-@media screen and (max-width: 559px){
-	.booking{
-		width: 50px;
-		margin-left: 2px;
-	}
-	.booking__label{
+.toggle-nav > span:before{
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 2px;
+	top: -6px;
+	background: #fff;
+	left: 0;
+	transition: .3s;
+}
+.toggle-nav > span:after{
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 2px;
+	left: 0;
+	bottom: -6px;
+	background: #fff;
+	transition: .3s;
+}
+.toggle-nav.opened >span{
+	background: transparent;
+}
+.toggle-nav.opened >span:before{
+	transform-origin: 50% 50%;
+	transform: rotate3d(0, 0, 1, 45deg);
+	top: 0;
+}
+.toggle-nav.opened >span:after{
+	transform-origin: 50% 50%;
+	transform: rotate3d(0, 0, 1, -45deg);
+	bottom: 0;
+}
+
+
+@media screen and (max-width: 920px){
+	.lovers__label{
 		display: none;
 	}
-	.booking__label-resposive{
+	.language{
+		margin-left: 3px;
+	}
+	.booking{
+		margin-left: 3px;
+	}
+}
+@media screen and (max-width: 640px) {
+	.toggle-nav{
+		display: block;
+	}
+	.settings{
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		float:none;
+		position: absolute;
+		top: 100%;
+		background: #133f5c;
+		left: 0;
+		right: 0;
+		width: auto;
+		text-align: center;
+	}
+	.settings.opened{
+		overflow: visible;
+	}
+	.booking{
+		border: 0;
+	}
+	.booking:hover{
+		border: 0;
+	}
+	.settings__inner{
 		display: inline-block;
 	}
-	.booking__angle{
-		right: 8px;
+	.lovers{
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		position: absolute;
+		background: #133f5c;
+		left: 0;
+		right: 0;
+		width: auto;
+		top: 133px;
+		text-align: center;
+		padding: 0;
 	}
-	.language{
-		margin-left: 2px;
+	.lovers__inner{
+		display: inline-block;
+		padding: 21px 0;
+		min-width: 320px;
+		border-top: 1px #fff solid;
 	}
-	.mybooking__triangle{
-		margin-right: -38px;
+	.lovers__label{
+		display: inline-block;
 	}
 }

@@ -1,0 +1,25 @@
+.top-location-section{
+    background: #efe3c5;
+}
+.top-location__footer{
+    padding: 10px 0 25px;
+    text-align: center;
+}
+.top-location__footer h2{
+    font: 18px open_sanssemibold;
+}
+
+.top-location__footer__list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.top-location__list__item:hover{
+    cursor: pointer;
+    background: #e4d9bd;
+}
+.top-location__list__item{
+    color: #8d6a16;
+    display: inline-block;
+    margin: 5px 8px 0;
+}

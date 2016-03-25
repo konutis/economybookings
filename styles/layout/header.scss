@@ -1,0 +1,563 @@
+.site-header {
+    height: 64px;
+    background: #1a5880;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+.settings{
+    float: right;
+    position: relative;
+    transition: opacity .3s;
+}
+.settings.opened{
+    height: auto;
+    opacity: 1;
+}
+
+.brand__logo{
+    float: left;
+    padding: 19px 0;
+    height: 26px;
+    width: 171px;
+}
+.brand__logo-resposive{
+    display: none;
+    float: left;
+    padding: 19px 0;
+    height: 100%;
+}
+
+/*    ------------   lovers     -------------    */
+
+.lovers{
+    float: left;
+    color: #bacdd9;
+    padding: 21px 0 21px 44px;
+    vertical-align: baseline;
+    font-size: 14px;
+    transition: .3s;
+}
+.lovers.opened{
+    opacity: 1;
+    height: auto;
+}
+
+.lovers__heart{
+    font-family: fontawesome, Arial, sans-serif;
+    margin-right: 6px;
+}
+.lovers__count{
+    font-size: 16px;
+    font-family: open_sanssemibold, Arial, sans-serif;
+    margin-right: 5px;
+}
+.lovers__label{
+    font-family: open_sanslight, Arial, sans-serif;
+}
+/*    ----------   phones    ----------------    */
+
+.phones-container{
+    float: left;
+    position: relative;
+}
+
+.phone:hover{
+    background-color: #133f5c;
+}
+.phone:hover> .phone__angle_box{
+    border: 0;
+}
+.phone{
+    color: #fff;
+    background: transparent;
+    border: 0;
+    text-align: right;
+    position: relative;
+    height: 64px;
+    padding: 0 45px 0 29px;
+    outline: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.phone__icon{
+    font-family: fontawesome, Arial, sans-serif;
+    vertical-align: -2px;
+    font-size: 18px;
+}
+.phone__code{
+    font-family: open_sanslight, Arial, sans-serif;
+}
+.phone__number{
+    font-family: open_sanssemibold, Arial, sans-serif;
+    font-size: 15px;
+}
+.phone__label{
+    font-size: 11px;
+    display: block;
+    margin-top: -5px;
+    opacity: .5;
+}
+.phone__angle_box{
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 30px;
+    height: 31px;
+    box-sizing: border-box;
+    border-right: 1px #8dacc0 solid;
+}
+.phone__angle{
+    font-family: fontawesome, Arial, sans-serif;
+    position: absolute;
+    left: -1px;
+    top: 7px;
+}
+.phones-dropdown.active{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.phones-dropdown{
+    display: none;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    margin-left: -275px;
+    color: #000;
+    z-index: 4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+.phones-dropdown:before,
+.languages-dropdown:before,
+.currency-dropdown:before,
+.booking-dropdown:before{
+    content: "";
+    border-style: solid;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.country-phones{
+    margin: 10px 0;
+    text-align: left;
+    vertical-align: baseline;
+    padding: 0 12px;
+}
+.country-phones:last-child{
+    border-left: 1px #ddd solid;
+}
+.country_phones__item{
+    width: 252px;
+}
+.country_phones__item__flag,
+.country_phones__item__flag--auto{
+    width: 27px;
+    float: left;
+}
+.country_phones__item__flag img,
+.country_phones__item__flag--auto img{
+    margin: 8px 0 0;
+    height: 14px;
+    width: 22px;
+}
+.country_phones__item__name{
+    font-family: open_sanssemibold, Arial, sans-serif;
+    font-size: 13px;
+    margin: 6px 0;
+    float: left;
+    max-width: 102px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.country_phones__item__number{
+    font-size: 13px;
+    display: block;
+    margin: 6px 0;
+    float: right;
+    max-width: 115px;
+    text-align: right;
+}
+@media screen and (max-width: 920px){
+    .lovers{
+        padding-left: 20px;
+    }
+    .phone__code,
+    .phone__number,
+    .phone__label{
+        display: none;
+    }
+    .phone{
+        width: 50px;
+
+        padding-left: 20px;
+    }
+    .phone__angle_box{
+        width: 20px;
+        border: 0;
+    }
+    .phone__icon{
+        margin-right: 13px;
+    }
+}
+@media screen and (max-width: 660px){
+    .phones-dropdown{
+        flex-direction: column;
+        padding: 7px 0;
+        margin-left: -138px;
+    }
+    .country-phones{
+        margin: 0;
+    }
+    .country-phones:last-child{
+        border: 0;
+    }
+}
+
+/*  -------------  language  ----------------    */
+
+.language-container{
+    float: left;
+    position: relative;
+}
+.language:hover{
+    background-color: #133f5c;
+    border-radius: 4px;
+    color: #fff;
+}
+.language{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    height: 38px;
+    color: #bacdd9;
+    margin: 13px 0 0 11px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.language__lang{
+    font-size: 14px;
+    margin: -1px 5px 0 15px;
+}
+.language__angle{
+    font-family: fontawesome, Arial, sans-serif;
+    margin: 1px 14px 0 0;
+}
+.languages-dropdown.active{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.languages-dropdown{
+    display: none;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -115px;
+    top: 60px;
+    padding: 9px 0 10px 0;
+    z-index: 4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.other-languages__langs{
+    width: 120px;
+    text-align: left;
+    font-size: 13px;
+    color: #000;
+}
+.other-languages__langs:last-child{
+    border-left: 1px #ddd solid;
+}
+
+.other-languages__langs__item:hover{
+    background: #1a587f;
+    color: #fff;
+    cursor: pointer;
+}
+.other-languages__langs__item__name{
+    display: block;
+    padding: 6px 0 6px 20px;
+}
+
+/* ---------------- currency ----------------- */
+
+.currency-container{
+    float: left;
+    position: relative;
+}
+.currency:hover{
+    background-color: #133f5c;
+    border-radius: 4px;
+    color: #fff;
+}
+.currency{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    height: 38px;
+    color: #bacdd9;
+    margin: 13px 0 13px 3px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.currency__valuta{
+    font-size: 13px;
+    font-family: fontawesome, Arial, sans-serif;
+    margin: 3px 8px 0 16px;
+}
+.currency__angle{
+    font-family: fontawesome, Arial, sans-serif;
+    margin: 1px 14px 0 0;
+}
+.currency-dropdown{
+    display: none;
+    width: 240px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    top: 60px;
+    border-radius: 3px;
+    padding: 9px 0 10px 0;
+    z-index: 4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+.currency-dropdown.active {
+    display: block;
+}
+.other-valuta__val__item{
+    font-size: 14px;
+}
+.other-valuta__val__item__name{
+    float: left;
+    line-height: 30px;
+    margin: 0 20px;
+    font-size: 14px;
+    max-width: 145px;
+}
+.other-valuta__val__item__simb{
+    float: right;
+    color: #1a5880;
+    margin-right: 20px;
+    line-height: 30px;
+}
+.other-valuta__val__item:hover{
+    background: #1a587f;
+    color: #fff;
+    cursor: pointer;
+}
+.other-valuta__val__item:hover> .other-valuta__val__item__simb{
+    color: #fff;
+}
+
+/*   --------  bookings   -----------  */
+
+.booking-container{
+    float: left;
+    position: relative;
+}
+.booking{
+    background: transparent;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px #5f8aa6 solid;
+    position: relative;
+    padding: 0 15px;
+    height: 38px;
+    color: #fff;
+    margin: 13px 0 0 20px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.booking:hover{
+    background-color: #133f5c;
+    border-radius: 4px;
+    border: 1px rgba(0,0,0, 0) solid;
+}
+.booking__label{
+    font-size: 13px;
+    margin-right: 2px;
+}
+.booking__label-resposive{
+    display: none;
+    font-family: fontawesome, Arial, sans-serif;
+    font-size: 13px;
+    margin-right: 3px;
+}
+.booking__angle{
+    font-family: fontawesome, Arial, sans-serif;
+}
+.booking-dropdown{
+    display: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 3px;
+    top: 60px;
+    right: 0;
+    padding: 20px;
+    z-index: 4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.booking-dropdown.active {
+    display: block;
+}
+.booking-dropdown:before{
+    left: 100%;
+    margin-left: -57px;
+}
+.mybooking__login__email,
+.mybooking__login__number{
+    height: 34px;
+    width: 190px;
+    border: 1px #ddd solid;
+    margin-bottom: 14px;
+    color: #777;
+    font-size: 13px;
+    padding-left: 8px;
+}
+.mybooking__login__button{
+    border: 0;
+    padding: 10px 0;
+    background: #0073b5;
+    border-radius: 3px;
+    color: #fff;
+    width: 100%;
+    outline: 0;
+}
+
+/*   -------   toggle navigation button   ---   */
+
+
+.toggle-nav{
+    display: none;
+    float: right;
+    width: 36px;
+    height: 36px;
+    border: 1px #5f8aa6 solid;
+    background: transparent;
+    margin-top: 13px;
+    border-radius: 3px;
+    outline: 0;
+    position: relative;
+}
+.toggle-nav > span{
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    transition: .2s;
+}
+.toggle-nav > span:before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: -6px;
+    background: #fff;
+    left: 0;
+    transition: .3s;
+}
+.toggle-nav > span:after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: #fff;
+    transition: .3s;
+}
+.toggle-nav.opened >span{
+    background: transparent;
+}
+.toggle-nav.opened >span:before{
+    transform-origin: 50% 50%;
+    transform: rotate3d(0, 0, 1, 45deg);
+    top: 0;
+}
+.toggle-nav.opened >span:after{
+    transform-origin: 50% 50%;
+    transform: rotate3d(0, 0, 1, -45deg);
+    bottom: 0;
+}
+
+
+@media screen and (max-width: 920px){
+    .lovers__label{
+        display: none;
+    }
+    .language{
+        margin-left: 3px;
+    }
+    .booking{
+        margin-left: 3px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .toggle-nav{
+        display: block;
+    }
+    .settings{
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        float:none;
+        position: absolute;
+        top: 100%;
+        background: #133f5c;
+        left: 0;
+        right: 0;
+        width: auto;
+        text-align: center;
+    }
+    .settings.opened{
+        overflow: visible;
+    }
+    .booking{
+        border: 0;
+    }
+    .booking:hover{
+        border: 0;
+    }
+    .settings__inner{
+        display: inline-block;
+    }
+    .lovers{
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        background: #133f5c;
+        left: 0;
+        right: 0;
+        width: auto;
+        top: 133px;
+        text-align: center;
+        padding: 0;
+    }
+    .lovers__inner{
+        display: inline-block;
+        padding: 21px 0;
+        min-width: 320px;
+        border-top: 1px #fff solid;
+    }
+    .lovers__label{
+        display: inline-block;
+    }
+}
