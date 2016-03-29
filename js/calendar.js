@@ -11,6 +11,9 @@ $(function(global, $){
     var cal_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var cal_current_date = new Date();
 
+    var pickupElData = "";
+    var returnElData = "";
+
 
     var Calendar = function(options, month, year) {
 
@@ -19,8 +22,10 @@ $(function(global, $){
     };
 
 
-
     Calendar.prototype = {
+
+        //generate navigation buttons
+
         generateButtons: function () {
 
             var btnHtml = "";
@@ -34,6 +39,9 @@ $(function(global, $){
                 $(".calendar-nav.prev").hide();
             }
         },
+
+        // generate HTML
+
         generateHTML: function(month, year) {
 
             // get first day of month
@@ -97,6 +105,9 @@ $(function(global, $){
             }
             html += '</tr></table></div>';
         },
+
+        // month navigation - previous / next
+
         switchMonth: function(direction, selector) {
 
             html = "";
@@ -129,18 +140,22 @@ $(function(global, $){
                     $(".calendar-nav.prev").show();
                 }
             }
-            if ( this.options.type === "rangePicker" ) {
-                this.createRange(selector);
-            }
+
+            this.setCreatedRange(selector);
         },
+
+        // create Range for first time from pickup date to return date
+
         createRange: function(selector) {
             var days = selector.find(".calendar-day");
 
-
+            days.bind("click", pickupDate);
 
             function pickupDate() {
 
-                var selectedDate = new Date($(this).data("date"));
+                var selectedPickupDate = new Date($(this).data("date"));
+
+                pickupElData = $(this).data("date");
 
                 $(this).addClass("pickup-date");
                 $(".js-calendar").removeClass("pickup-cal").addClass("return-cal");
@@ -152,13 +167,13 @@ $(function(global, $){
                     var hoverDate = new Date($(this).data("date"));
 
 
-                    if ( selectedDate.getTime() < hoverDate.getTime() ) {
+                    if ( selectedPickupDate.getTime() < hoverDate.getTime() ) {
 
                         // creating range
                         days.each(function() {
                             var dayDate = new Date($(this).data("date"));
 
-                            if ( selectedDate.getTime() < dayDate.getTime() &&  dayDate.getTime() <= hoverDate.getTime()){
+                            if ( selectedPickupDate.getTime() < dayDate.getTime() &&  dayDate.getTime() <= hoverDate.getTime()){
                                 $(this).addClass("in-range");
 
                             } else {
@@ -182,19 +197,53 @@ $(function(global, $){
 
                 days.unbind("mouseenter");
 
+                returnElData = $(this).data("date");
+
                 $(this).addClass("return-date");
                 days.unbind("click");
 
-                setTimeout(function() {
-                    $(".js-calendar").removeClass("active");
-                }, 1000)
+                //setTimeout(function() {
+                //    $(".js-calendar").removeClass("active");
+                //}, 1000)
             }
 
-
-            days.bind("click", pickupDate);
-
-
         },
+
+        // create already created range. This is for navigation, because switching calendar month causes new generating.
+
+        setCreatedRange: function(selector) {
+
+            var days = selector.find(".calendar-day");
+
+            for ( var l = 0; l < days.length; l++) {
+                var $this = $(days[l]);
+                var dayData = $(days[l]).data("date");
+
+                var pickupElDataDate = new Date(pickupElData),
+                    returnElDataDate = new Date(returnElData),
+                    dayDataDate = new Date(dayData);
+
+                if ( dayData === pickupElData) {
+                    $this.addClass("pickup-date");
+                } else if ( dayData === returnElData ) {
+                    $this.addClass("return-date");
+                } else if ( pickupElDataDate.getTime() < dayDataDate.getTime() && dayDataDate.getTime() < returnElDataDate.getTime() ) {
+                    $this.addClass("in-range");
+                }
+            }
+        },
+
+        // get the days that are gone
+
+        getGoneDates: function(selector) {
+            var days = selector.find(".calendar-day");
+            for ( var i = 0; i < days; i++) {
+                console.log(i);
+            }
+        },
+
+        // main function for setting the calendar
+
         setCalendar: function(selector) {
             var self = this;
             this.generateButtons(selector);
@@ -228,8 +277,6 @@ $(function(global, $){
         self.counter = 0;
 
     };
-
-
 
 
     Calendar.init.prototype = Calendar.prototype;

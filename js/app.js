@@ -34,8 +34,8 @@ $(function(global, $){
         });
         $returnButton.on("click", function() {
             $calendar.removeClass("pickup-cal").addClass("return-cal");
-
         });
+
     });
 
 
